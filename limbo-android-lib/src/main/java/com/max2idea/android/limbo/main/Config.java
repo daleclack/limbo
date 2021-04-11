@@ -109,8 +109,8 @@ public class Config {
     /// thought there is also the Disable TSC feature so you don't have to do it here
     public static boolean enableSMPOnlyOnKVM = false;
 
-    //set to false if you need to debug native library loading
-    public static boolean loadNativeLibsEarly = false;
+    //set to true if you need to debug native library loading
+    public static boolean loadNativeLibsEarly = false; 
 
     //XXX: QEMU 3.1.0 needs the libraries to be loaded from the main thread
     public static boolean loadNativeLibsMainThread = true;
@@ -140,6 +140,12 @@ public class Config {
     public static boolean enableEmulatedFloppy = true;
     public static boolean enableEmulatedSDCard;
     public static String destLogFilename = "limbolog.txt";
+
+    public static String notificationChannelID = "limbo";
+    public static String notificationChannelName = "limbo";
+    public static boolean showToast = false;
+    public static boolean closeFileDescriptors = true;
+
 
     public static final String getCacheDir(){
         return cacheDir.toString();
@@ -207,7 +213,7 @@ public class Config {
     public static boolean enableToggleKeyboard = false;
 
     //override this at the app level it dependes on the host arch
-    public static boolean enableMTTCG = false;
+    public static boolean enableMTTCG = true;
 
 
 
